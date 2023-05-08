@@ -12,9 +12,9 @@ const folderPath = path.join(__dirname, 'secret-folder');
     if (data.isFile()) {
       const name = file.name.replace(/\.[^.]+$/, '');
       const extname = path.extname(filePath).slice(1);
-      const size = data.size * 0.001;
+      const size = data.size;
 
-      console.log(`${name} - ${extname} - ${size}kb`);
+      console.log(`${name} - ${extname} - ${size}b`);
     }
   }));
 })();
